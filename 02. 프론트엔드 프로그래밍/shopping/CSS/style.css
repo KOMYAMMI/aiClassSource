@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR&display=swap');
 
 /* 기본 스타일 초기화 S */
 html {
@@ -19,7 +19,7 @@ body {
 
 ul, ol {
     list-style: none;
-    margin: 0;
+    margin: 0; 
     padding: 0;
 }
 
@@ -38,12 +38,24 @@ img {
 /* 기본 스타일 초기화 E */
 
 /* 공통 스타일 S */
-
 * {
     box-sizing: border-box;
     outline: none;
-    font-family:  "Noto Sans KR", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
 }
+
+h2 {
+    font-size: 1.539rem;
+    color: #212121;
+    line-height: 1;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
 /* 공통 스타일 E */
 
 /* 헤더 영역 S */
@@ -54,6 +66,7 @@ header {
     padding: 0 15px;
     align-items: center;
 }
+
 
 header .left {
     width: 90px;
@@ -67,7 +80,6 @@ header .right {
 header .logo {
     flex-grow: 1;
     text-align: center;
-
 }
 
 header .logo img {
@@ -92,13 +104,13 @@ header .left button {
     border: 0;
 }
 
-header .left button.more-menu {
-    background: #fff url(../images/more_btn.png) no-repeat center center;
+header .left .more-menu {
+    background: #fff url("../images/more_btn.png") no-repeat center center;
     background-size: contain;
 }
 
 header .left .search-btn {
-    background: #fff url(../images/search.png) no-repeat center center;
+    background: #fff url("../images/search.png") no-repeat center center;
     background-size: contain;
 }
 
@@ -108,7 +120,6 @@ header .left .search-btn {
 nav {
     display: flex;
     height: 44px;
-
 }
 
 nav a {
@@ -119,5 +130,124 @@ nav a {
     color: #494949;
 }
 
-
 /* 사이트 주 메뉴 E */
+
+/* 메인 배너 S */
+.main-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner .swiper-slide img {
+    width: 100%;
+    display: block; /* 이미지 여백 없애기 */
+}
+
+.main-banner .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.main-banner .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.main-banner .swiper-button-prev,
+.main-banner .swiper-button-next {
+    color: #fff;
+}
+
+.main-banner .swiper-pagination {
+    bottom: 10px;
+}
+/* 메인 배너 E */
+
+/* 서브 메뉴 S */
+.sub-menus {
+    border: 10px solid #ededed;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 9px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-menus a {
+    width: calc(100% / 3);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.077rem;
+    font-weight: 500;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+}
+
+.sub-menus a:nth-of-type(3n + 1) {
+    border-left: 0;
+}
+/* 서브 메뉴 E */
+
+/* 상품 S */
+.products {
+    padding: 0 15px;
+}
+
+.products ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products ul li {
+    width: calc(50% - 8px);
+    margin-bottom: 30px;
+}
+
+.products ul li:nth-of-type(2n + 1) {
+    margin-right: 16px;
+}
+
+.products .product-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.products .price-info span {
+    font-size: 1.39em;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.products .price-info {
+    font-size: 1.154rem;
+}
+
+.products .product-name {
+    font-size: 1.154rem;
+    color: #3e3d3c
+    break-all;
+}
+/* 상품 E */
+
+/* 하단 퀵버튼 S */
+.quick-buttons {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
+
+.quick-buttons img {
+    display: block;
+    width: 50px
+}
+
+.quick-buttons a + a img {
+    margin-top: 10px;
+}
+/* 하단 퀵버튼 E */
+
